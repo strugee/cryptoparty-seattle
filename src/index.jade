@@ -1,0 +1,181 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		title CryptoParty Seattle
+
+		link(rel='stylesheet', type='text/css', href='build/build.css')
+
+	body
+
+		article
+
+			section
+				img#cryptoparty-logo(src='images/CryptoPartyLogo.svg' alt='CryptoParty')
+				h1 Seattle
+
+			section
+				h2 Welcome!
+					h3.bullet I'm your host, Alex Jordan.
+					h3.bullet But you can call me AJ.
+
+			section
+				h2 Huge thanks to Black Coffee
+				h3 They're hosting this event for free.
+				h3 Please consider buying food and drink from them. I've tried it before. It's all awesome.
+
+			section
+				h2 Roadmap
+				h3 Tor
+				h3 Off-The-Record (OTR)
+				h3 Pretty Good Privacy (PGP) & GNU Privacy Guard (GnuPG, aka GPG)
+				h3 Keysigning party
+
+			section
+				h2 But first, a note and a survey
+
+			section
+				h2 Talk to me! (This is the note part)
+				h3 I want this to be more of a conversation than a presentation. Me reading off the slides is boring.
+				h3 After the slides, during the slides, between the slides... hands or no hands, I want to hear from you.
+				h3 Feedback, questions, jokes, whatever. (And yes, there are no dumb questions.)
+				h3 Am I boring you? Tell me!
+
+			section
+				h2 Now, the survey
+
+			section
+				h2.bullet Raise your hand if you use...
+				h3.bullet Windows
+				h3.bullet Mac OS X
+				h3.bullet GNU/Linux (e.g. Ubuntu, Elementary, Debian, Mint, Fedora, OpenSUSE, etc...)
+				h3.bullet Something else ([Free,Net,Open,PC-,*]BSD, Solaris, Illumos, GNU/Hurd, System V R4, Haiku, DOS, etc...)
+				h3.bullet I don't know
+
+			section
+				h2.bullet Cool. Raise your hand again if you use GNU/Linux or something else, and prefer...
+				h3.bullet GNOME, Unity, Pantheon (Enlightenment OS), MATE, or Cinammon
+				h3.bullet KDE or Trinity
+				h3.bullet XFCE, LXDE, Razor-qt, or Enlightenment
+				h3.bullet Something else (e.g. a standalone WM)
+				h3.bullet I don't know
+
+			section
+				h2 Thanks for humoring me. Now - let's begin.
+
+			section(data-bespoke-hash='tor')
+				img.bullet(src='images/TorLogo.svg')
+				h2.bullet Tor
+
+			section(data-bespoke-hash='otr')
+				h2 Off-The-Record
+
+			section(data-bespoke-hash='pgp')
+				img.bullet(src='images/GnuPGLogo.svg')
+				h2.bullet Pretty Good Privacy using GNU Privacy Guard
+
+			section
+				h2.bullet Some background
+				h3.bullet Originally, PGP referred to two things - PGP the system, and PGP the software
+				h3.bullet PGP the software was used to make use of PGP the system
+				h3.bullet Now, we don't really use PGP the software. We use the GNU Privacy Guard instead.
+
+			section
+				h2.bullet GNU Privacy Guard
+				h3.bullet Normally called GPG and occasionally called GnuPG
+				h3.bullet GPG is used to access PGP the system, just like PGP the software.
+				h3.bullet GPG is different and better than PGP the software in several ways. Most notably, it is free software.
+
+			section
+				h2.bullet PGP the system
+				h3.bullet Usually known as the Web of Trust
+				h3.bullet The Web of Trust is the most difficult to explain of everything here
+				h3.bullet I will go slow and do my best to explain. Please stop me right away if I'm not making sense.
+
+			section
+				h2.bullet Web of Trust basics
+				h3.bullet Essentially, the Web of Trust is a way to authenticate who someone else is.
+				h3.bullet Put another way, the Web of Trust allows you to verify someone else's identity.
+				h3.bullet This works by constructing a chain of trust.
+
+			section
+				h2.bullet Trust chains
+				h3.bullet Trust chains start with who <em>you</em> trust.
+				h3.bullet Then they go to whoever is trusted by the people you trust.
+				h3.bullet GPG will construct these chains until you eventually get to the person whose identity you're trying to verify.
+
+			section
+				h2.bullet Trust chain example
+				h3.bullet A while back, I met up with Alice in real life, and I verified that her online identity matches her real life identity.
+				h3.bullet Now I can trust her online identity, because I've verified that it corresponds to a real person - and more importantly, the correct person.
+				h3.bullet Alice has met up with several people in real life, and done the same verification. Bob is one of the people Alice has met up with.
+				h3.bullet I'm trying to securely contact Joe. Bob has met up with Joe and verified his identity.
+				h3.bullet Because I trust Alice, Alice trusts Bob, and Bob trusts Joe, I can trust Joe.
+
+			section
+				h2.bullet From the conceptual to the practical
+				h3.bullet When I say "online identity", what I am really talking about is a public key
+				h3.bullet On a technical level, the Web of Trust is composed of two things:
+				ol
+					li A collection of public keys
+					li A collection of signatures on those public keys
+
+			section
+				h2.bullet Keysigning
+				h3.bullet Every key in the Web of Trust <em>claims</em> to be owned by a real person. That claim may or may not be true.
+				h3.bullet In other words, when someone creates their key and fills in their name, they are either lying or not lying.
+				h3.bullet The act of signing a key says that you have verified, somehow, that the claim made by a key is the truth.
+				h3.bullet Usually, this verification is done by meeting up in real life and comparing government-issued photo ID.
+				h3.bullet If you know the person, and know what their voice sounds like, having them read their key ID to you over the phone will also work.
+
+			section
+				h2.bullet Why is keysigning valuable?
+				h3.bullet You want others to sign your keys so that people will know that your key is really yours
+				h3.bullet You want to sign others' keys so that GPG is able to construct trust chains to people you haven't met up with yet
+				h3.bullet You also should sign others' keys so that you don't appear rude, so that they will sign your key
+
+			section
+				h2.bullet A small note on how well you need to know the person
+				h3.bullet You do not need to know a person at all to sign their key.
+				h3.bullet You can even sign the key of a person you've just met. And, in fact, many people do at keysigning parties.
+				h3.bullet Just be aware of how you need to verify their identity. (I will talk about this in just a second.)
+
+			section
+				h2.bullet But wait, I hear you say!
+				h3.bullet What if I sign the key of a malicious actor? What if someone whose key I've signed signs others' keys without verifying their identity?
+				h3.bullet No problem. GPG will actually build more than one trust chain.
+				h3.bullet It requires a certain amount of chains, not just one chain, to have checked out before it will trust a key.
+
+			section
+				h2.bullet Keysigning best practices
+				h3.bullet This is the easy part.
+				h3.bullet General rules: for people you know well, a phone call will suffice. This is because you will recognize their voice - no (regular) texting!
+				h3.bullet You can skip the phone call if you have already established a secure conversation with them in some other way. For example, if you've verified their identify over OTR, you can use OTR to send them your key.
+				h3.bullet For people you <em>don't</em> know as well, it's not nearly as convenient. :(
+				h3.bullet At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.
+				h3.bullet If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.
+
+			section(data-bespoke-hash='attributions')
+				h1 Attributions
+				h2 CryptoParty logo - public domain (CC0)
+				h2 Tor logo - The Tor Project, Inc. - CC 3.0 Attribution US
+
+			section(data-bespoke-state='emphatic')
+				h2 Emphatic Slide!
+				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a>
+
+			section
+				h2.bullet Just the beginning...
+				br
+				ul
+					li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
+					li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
+					li Edit JavaScript in <em>'src/scripts/main.js'</em>
+				br
+				ul
+					li
+						strong Enjoy! :)
+						a(href='http://twitter.com/markdalgleish')	-@markdalgleish
+
+		script(src='build/build.js')
