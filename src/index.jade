@@ -17,8 +17,8 @@ html
 
 			section
 				h2 Welcome!
-					h3.bullet I'm your host, Alex Jordan.
-					h3.bullet But you can call me AJ.
+				h3.bullet I'm your host, Alex Jordan.
+				h3.bullet But you can call me AJ.
 
 			section
 				h2 Huge thanks to Black Coffee
@@ -27,13 +27,18 @@ html
 
 			section
 				h2 Roadmap
+				h3 Privacy basics (part I)
 				h3 Tor
+				hr
+				h3 Privacy basics (part II)
 				h3 Off-The-Record (OTR)
+				hr
 				h3 Pretty Good Privacy (PGP) & GNU Privacy Guard (GnuPG, aka GPG)
+				h3 Honourable mentions and other miscellanea
 				h3 Keysigning party
 
 			section
-				h2 But first, a note and a survey
+				h1 But first, a note and a survey
 
 			section
 				h2 Talk to me! (This is the note part)
@@ -54,7 +59,7 @@ html
 				h3.bullet I don't know
 
 			section
-				h2.bullet Cool. Raise your hand again if you use GNU/Linux or something else, and prefer...
+				h3.bullet <strong>Cool. Raise your hand again if you use GNU/Linux or something else, and prefer...</strong>
 				h3.bullet GNOME, Unity, Pantheon (Enlightenment OS), MATE, or Cinammon
 				h3.bullet KDE or Trinity
 				h3.bullet XFCE, LXDE, Razor-qt, or Enlightenment
@@ -64,12 +69,69 @@ html
 			section
 				h2 Thanks for humoring me. Now - let's begin.
 
+			section(data-bespoke-hash='privacy-basics-1')
+				h1 Privacy basics (I) - some basic terms
+
+			section
+				h2.bullet Let's keep this short.
+				h3.bullet <em>Encryption</em> is the process of using a key, like a word or a number, to scramble some text so that it can't be read unless you have the key
+				h3.bullet <em>Decryption</em> is the process of using that same key to unscramble the encrypted text
+				h3.bullet <em>Plaintext</em> is text that has not been encrypted
+				h3.bullet <em>Cryptography</em> is the study and practice of encryption
+				h3.bullet We encrypt things to protect our privacy
+
 			section(data-bespoke-hash='tor')
 				img.bullet(src='images/TorLogo.svg')
-				h2.bullet Tor
+				h1.bullet Tor
+
+			section
+				h2.bullet What is Tor?
+				h3.bullet You know in those old movies where some kid is breaking into a computer and it shows the map, with the connection bouncing all around the world?
+				h3.bullet That's basically what Tor is.
+				h3.bullet Tor anonymizes you by making it seem like your requests for web pages are coming from a random location in the world
+				h3.bullet Tor can also help you circumvent censorship
+
+			section
+				h2.bullet Using Tor
+				h3.bullet Tor isn't useful on its own
+				h3.bullet Instead, you use your normal applications - like email, chat and your web browser - and tell them to send all their data through the Tor network instead of the regular Internet.
+				h3.bullet For your web browser, you use the Tor Browser Bundle
+				h3.bullet For other applications, you use their proxy settings
+				h3.bullet For BitTorrent, you do nothing. Don't use BitTorrent with Tor.
+				h3.bullet For the truly paranoid, you use TAILS
+
+			section
+				h2.bullet The Tor Browser Bundle
+				h3.bullet TBB is a browser, based on Firefox, that is preconfigured to use Tor properly
+				h3.bullet It will help you connect to the Tor network and remain anonymous online
+				h3.bullet However, TBB cannot do everything. You may need to change some of your browsing habits.
+
+			section
+				h2.bullet What you need to do
+				h3.bullet Don't use browser plugins
+				h3.bullet Use HTTPS
+				h3.bullet Don't open downloaded documents while online
+				h3.bullet Be aware of logging in to websites (there's no point being anonymous if you tell them who you are)
+
+			section
+				h2.bullet TAILS, The Amnesiac Incognito Live System
+				h3.bullet TAILS is like the TBB, but it works for the entire operating system.
+				h3.bullet Instead of starting TAILS from your hard drive, you put TAILS on a CD and start the computer from the CD.
+				h3.bullet Nothing in TAILS ever gets written to your hard disk. When you shut down TAILS, it forgets about everything you did.
+				h3.bullet The warning about signing into things still applies, but otherwise, TAILS is pretty hassle-free. <em>Everything</em> goes through Tor.
+
+			section(data-bespoke-hash='privacy-basics-2')
+				h1 Privacy basics (II) - public-key cryptography
+
+			section
+				h2.bullet
 
 			section(data-bespoke-hash='otr')
-				h2 Off-The-Record
+				h1 Off-The-Record
+
+			section
+				h2.bullet Off-The-Record basics
+				TODO
 
 			section(data-bespoke-hash='pgp')
 				img.bullet(src='images/GnuPGLogo.svg')
@@ -79,13 +141,14 @@ html
 				h2.bullet Some background
 				h3.bullet Originally, PGP referred to two things - PGP the system, and PGP the software
 				h3.bullet PGP the software was used to make use of PGP the system
-				h3.bullet Now, we don't really use PGP the software. We use the GNU Privacy Guard instead.
+				h3.bullet Nowadays, we don't really use PGP the software. We use the GNU Privacy Guard instead.
 
 			section
 				h2.bullet GNU Privacy Guard
 				h3.bullet Normally called GPG and occasionally called GnuPG
 				h3.bullet GPG is used to access PGP the system, just like PGP the software.
 				h3.bullet GPG is different and better than PGP the software in several ways. Most notably, it is free software.
+				h3.bullet You don't really need to worry about this. GPG, PGP and OpenPGP (another name for PGP the system) are used interchangeably.
 
 			section
 				h2.bullet PGP the system
@@ -158,8 +221,8 @@ html
 
 			section(data-bespoke-hash='attributions')
 				h1 Attributions
-				h2 CryptoParty logo - public domain (CC0)
-				h2 Tor logo - The Tor Project, Inc. - CC 3.0 Attribution US
+				h3 CryptoParty logo - public domain (CC0)
+				h3 Tor logo - The Tor Project, Inc. - CC 3.0 Attribution US
 
 			section(data-bespoke-state='emphatic')
 				h2 Emphatic Slide!
