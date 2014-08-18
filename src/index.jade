@@ -34,6 +34,7 @@ html
 				h3 Off-The-Record (OTR)
 				hr
 				h3 Pretty Good Privacy (PGP) & GNU Privacy Guard (GnuPG, aka GPG)
+				hr
 				h3 Honourable mentions and other miscellanea
 				h3 Keysigning party
 
@@ -82,7 +83,7 @@ html
 
 			section(data-bespoke-hash='tor')
 				img.bullet(src='images/TorLogo.svg')
-				h1.bullet Tor
+				h1.bullet Tor (TODO)
 
 			section
 				h2.bullet What is Tor?
@@ -120,18 +121,56 @@ html
 				h3.bullet Nothing in TAILS ever gets written to your hard disk. When you shut down TAILS, it forgets about everything you did.
 				h3.bullet The warning about signing into things still applies, but otherwise, TAILS is pretty hassle-free. <em>Everything</em> goes through Tor.
 
+			section
+				h1 Break - TODO
+
 			section(data-bespoke-hash='privacy-basics-2')
 				h1 Privacy basics (II) - public-key cryptography
 
 			section
-				h2.bullet
+				h2.bullet Public key? Shouldn't I keep my keys secret?
+				h3.bullet Public-key cryptography refers to encryption systems in which instead of having one key, you have two.
+				h3.bullet This is useful because then you don't have to give the same key to all your friends.
+				h3.bullet (Imagine you used the key "asdf". You use "asdf" to encrypt emails to Alice and Mallory. Eve can't read your email to Alice, but now Mallory can, because you use the same key for both!)
+
+			section
+				h2.bullet Your two keys
+				h3.bullet In public-key cryptography, you have two keys. One private (duh), and one public.
+				h3.bullet When you encrypt something using your private key, it can only be decrypted using your public key. Your private key won't work for decryption.
+				h3.bullet And when someone encrypts something using your public key, it can only be decrypted using your private key.
+				h3.bullet There's a whole bunch of math that makes this work. You don't need to worry about that.
+
+			section
+				h2.bullet Things that public-key cryptography does
+				h3.bullet By encrypting something with your private key, you have digitally signed it
+				h3.bullet To verify the signature, someone else decrypts it with your public key.
+				h3.bullet By encrypting something with another person's public key, you can be sure that no one but them can read it.
 
 			section(data-bespoke-hash='otr')
 				h1 Off-The-Record
 
 			section
 				h2.bullet Off-The-Record basics
-				TODO
+				h3.bullet Off-The-Record, also known as OTR, takes public-key cryptography and sticks it in chat.
+				h3.bullet It encrypts your chat messages so that no one, not even the organization who provides the chat, can read your conversations.
+				h3.bullet Luckily for you, you don't have to worry about keys when using OTR. OTR will manage them for you.
+				h3.bullet You just turn it on, challenge the other person with a question that only they would know (to make sure that it's really them), and talk
+				h3.bullet One caveat: OTR only works after the first message. Normally this probably isn't a big deal, unless you are e.g. whistleblowing.
+
+			section
+				h2.bullet So how do I use it?
+				h3.bullet Get Pidgin and turn on the OTR plugin.
+				h3.bullet Start a chat and click on the OTR icon. Follow the prompts.
+				h3.bullet Congrats! Your conversation is now encrypted.
+
+			section
+				h2.bullet Obligatory warning
+				h3.bullet If you are a highly-targeted individual, or are especially paranoid, do not use Pidgin.
+				h3.bullet Your risks are different and you must act accordingly.
+				h3.bullet Talk to me afterwards and I can explain why.
+
+			section
+				Break - TODO
 
 			section(data-bespoke-hash='pgp')
 				img.bullet(src='images/GnuPGLogo.svg')
@@ -219,26 +258,29 @@ html
 				h3.bullet At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.
 				h3.bullet If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.
 
+			section
+				h1 Break - TODO
+
+			section(data-bespoke-hash='honourable-mentions')
+				h1 Honourable mentions and other miscellanea
+
+			section
+				h2 Honourable mentions (TODO)
+				h3 TextSecure
+				h3 RedPhone
+				h3 APG & K9
+
 			section(data-bespoke-hash='attributions')
 				h1 Attributions
 				h3 CryptoParty logo - public domain (CC0)
 				h3 Tor logo - The Tor Project, Inc. - CC 3.0 Attribution US
+				h3 Slideshow built using Bespoke.js
+
+			section
+				h1 Keysigning party
 
 			section(data-bespoke-state='emphatic')
 				h2 Emphatic Slide!
 				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a>
-
-			section
-				h2.bullet Just the beginning...
-				br
-				ul
-					li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-					li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-					li Edit JavaScript in <em>'src/scripts/main.js'</em>
-				br
-				ul
-					li
-						strong Enjoy! :)
-						a(href='http://twitter.com/markdalgleish')	-@markdalgleish
 
 		script(src='build/build.js')
