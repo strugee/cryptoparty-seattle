@@ -61,7 +61,7 @@ html
 
 			section
 				h3.bullet <strong>Cool. Raise your hand again if you use GNU/Linux or something else, and prefer...</strong>
-				h3.bullet GNOME, Unity, Pantheon (Enlightenment OS), MATE, or Cinammon
+				h3.bullet GNOME, Unity, Pantheon (Elementary OS), MATE, or Cinammon
 				h3.bullet KDE or Trinity
 				h3.bullet XFCE, LXDE, Razor-qt, or Enlightenment
 				h3.bullet Something else (e.g. a standalone WM)
@@ -70,7 +70,7 @@ html
 			section
 				h2 Thanks for humoring me. Now - let's begin.
 
-			section(data-bespoke-hash='privacy-basics-1')
+			section
 				h1 Privacy basics (I) - some basic terms
 
 			section
@@ -81,9 +81,9 @@ html
 				h3.bullet <em>Cryptography</em> is the study and practice of encryption
 				h3.bullet We encrypt things to protect our privacy
 
-			section(data-bespoke-hash='tor')
-				img.bullet(src='images/TorLogo.svg')
-				h1.bullet Tor (TODO)
+			section
+				img.bullet(src='images/TorLogo.png', width='123', height='181')
+				h1.bullet Tor
 
 			section
 				h2.bullet What is Tor?
@@ -121,10 +121,10 @@ html
 				h3.bullet Nothing in TAILS ever gets written to your hard disk. When you shut down TAILS, it forgets about everything you did.
 				h3.bullet The warning about signing into things still applies, but otherwise, TAILS is pretty hassle-free. <em>Everything</em> goes through Tor.
 
-			section
-				h1 Break - TODO
+			section(data-bespoke-state='emphatic')
+				img(src='images/GetOnDownAndGetEncryptedWithACryptoParty.jpeg', alt='#cryptoparty', width='421', height='272')
 
-			section(data-bespoke-hash='privacy-basics-2')
+			section
 				h1 Privacy basics (II) - public-key cryptography
 
 			section
@@ -146,13 +146,16 @@ html
 				h3.bullet To verify the signature, someone else decrypts it with your public key.
 				h3.bullet By encrypting something with another person's public key, you can be sure that no one but them can read it.
 
-			section(data-bespoke-hash='otr')
+			section
 				h1 Off-The-Record
 
 			section
 				h2.bullet Off-The-Record basics
 				h3.bullet Off-The-Record, also known as OTR, takes public-key cryptography and sticks it in chat.
 				h3.bullet It encrypts your chat messages so that no one, not even the organization who provides the chat, can read your conversations.
+
+			section
+				h2.bullet The tech
 				h3.bullet Luckily for you, you don't have to worry about keys when using OTR. OTR will manage them for you.
 				h3.bullet You just turn it on, challenge the other person with a question that only they would know (to make sure that it's really them), and talk
 				h3.bullet One caveat: OTR only works after the first message. Normally this probably isn't a big deal, unless you are e.g. whistleblowing.
@@ -169,10 +172,10 @@ html
 				h3.bullet Your risks are different and you must act accordingly.
 				h3.bullet Talk to me afterwards and I can explain why.
 
-			section
-				Break - TODO
+			section(data-bespoke-state='emphatic')
+				img(src='images/CC_BY_3.0_state_of_surveillance_by_xp0s3.jpg', alt='cryptoparty.org - refuse the state of surveillance', width='362', height='456')
 
-			section(data-bespoke-hash='pgp')
+			section
 				img.bullet(src='images/GnuPGLogo.svg')
 				h2.bullet Pretty Good Privacy using GNU Privacy Guard
 
@@ -250,37 +253,46 @@ html
 				h3.bullet It requires a certain amount of chains, not just one chain, to have checked out before it will trust a key.
 
 			section
-				h2.bullet Keysigning best practices
+				h2.bullet Keysigning best practices: for people you do know
 				h3.bullet This is the easy part.
-				h3.bullet General rules: for people you know well, a phone call will suffice. This is because you will recognize their voice - no (regular) texting!
+				h3.bullet For people you know well, a phone call will suffice. This is because you will recognize their voice - no (regular) texting!
 				h3.bullet You can skip the phone call if you have already established a secure conversation with them in some other way. For example, if you've verified their identify over OTR, you can use OTR to send them your key.
+
+			section
+				h2.bullet Keysigning best practices: for people you don't know
 				h3.bullet For people you <em>don't</em> know as well, it's not nearly as convenient. :(
 				h3.bullet At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.
 				h3.bullet If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.
 
-			section
-				h1 Break - TODO
+			section(data-bespoke-state='emphatic')
+				img(src='images/CC_BY_3.0_weak_link_by_xp0s3.jpg', alt='Do not be the weak link - cryptoparty.org', height='371', width='556')
 
-			section(data-bespoke-hash='honourable-mentions')
+			section
 				h1 Honourable mentions and other miscellanea
 
 			section
-				h2 Honourable mentions (TODO)
-				h3 TextSecure
-				h3 RedPhone
-				h3 APG & K9
+				h2.bullet Honourable mentions
+				h3.bullet <a href="https://whispersystems.org/blog/signal/">TextSecure / RedPhone / Signal</a>
+				h3.bullet <a href="http://thialfihar.org/projects/apg/">APG</a> / <a href="http://www.openkeychain.org/">OpenKeychain</a> & <a href="https://play.google.com/store/apps/details?id=com.fsck.k9">K9</a>
+				h3.bullet <a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>
 
-			section(data-bespoke-hash='attributions')
-				h1 Attributions
+			section
+				h2 More resources
+				h3 <a href="https://prism-break.org/en/">PRISM Break</a>
+				h3 Reset the Net's <a href="https://pack.resetthenet.org/">Privacy Pack</a>
+				h3 Free Software Foundation's <a href="https://emailselfdefense.fsf.org/en/">Email Self Defense</a>
+				h3 <a href="https://cryptoparty.in/">CryptoParty website</a>
+
+			section
+				h2 Attributions
 				h3 CryptoParty logo - public domain (CC0)
-				h3 Tor logo - The Tor Project, Inc. - CC 3.0 Attribution US
+				h3 Tor logo - The Tor Project, Inc. - CC Attribution 3.0 US
+				h3 State of surveillance - xp0s3 - CC BY 3.0
+				h3 GnuPG logo - 
+				h3 Weak link - xp0s3 - CC BY 3.0
 				h3 Slideshow built using Bespoke.js
 
 			section
 				h1 Keysigning party
-
-			section(data-bespoke-state='emphatic')
-				h2 Emphatic Slide!
-				h3 Powered by <a href="https://github.com/markdalgleish/bespoke-state">bespoke-state</a>
 
 		script(src='build/build.js')
