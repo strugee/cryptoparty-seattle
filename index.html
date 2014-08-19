@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CryptoParty Seattle</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section><img id="cryptoparty-logo" src="images/CryptoPartyLogo.svg" alt="CryptoParty">
+        <h1>Seattle</h1>
+      </section>
+      <section>
+        <h2>Welcome!</h2>
+        <h3 class="bullet">I'm your host, Alex Jordan.</h3>
+        <h3 class="bullet">But you can call me AJ.</h3>
+      </section>
+      <section>
+        <h2>Huge thanks to Black Coffee</h2>
+        <h3>They're hosting this event for free.</h3>
+        <h3>Please consider buying food and drink from them. I've tried it before. It's all awesome.</h3>
+      </section>
+      <section>
+        <h2>Roadmap</h2>
+        <h3>Privacy basics (part I)</h3>
+        <h3>Tor</h3>
+        <hr>
+        <h3>Privacy basics (part II)</h3>
+        <h3>Off-The-Record (OTR)</h3>
+        <hr>
+        <h3>Pretty Good Privacy (PGP) & GNU Privacy Guard (GnuPG, aka GPG)</h3>
+        <hr>
+        <h3>Honourable mentions and other miscellanea</h3>
+        <h3>Keysigning party</h3>
+      </section>
+      <section>
+        <h1>But first, a note and a survey</h1>
+      </section>
+      <section>
+        <h2>Talk to me! (This is the note part)</h2>
+        <h3>I want this to be more of a conversation than a presentation. Me reading off the slides is boring.</h3>
+        <h3>After the slides, during the slides, between the slides... hands or no hands, I want to hear from you.</h3>
+        <h3>Feedback, questions, jokes, whatever. (And yes, there are no dumb questions.)</h3>
+        <h3>Am I boring you? Tell me!</h3>
+      </section>
+      <section>
+        <h2>Now, the survey</h2>
+      </section>
+      <section>
+        <h2 class="bullet">Raise your hand if you use...</h2>
+        <h3 class="bullet">Windows</h3>
+        <h3 class="bullet">Mac OS X</h3>
+        <h3 class="bullet">GNU/Linux (e.g. Ubuntu, Elementary, Debian, Mint, Fedora, OpenSUSE, etc...)</h3>
+        <h3 class="bullet">Something else ([Free,Net,Open,PC-,*]BSD, Solaris, Illumos, GNU/Hurd, System V R4, Haiku, DOS, etc...)</h3>
+        <h3 class="bullet">I don't know</h3>
+      </section>
+      <section>
+        <h3 class="bullet"><strong>Cool. Raise your hand again if you use GNU/Linux or something else, and prefer...</strong></h3>
+        <h3 class="bullet">GNOME, Unity, Pantheon (Elementary OS), MATE, or Cinammon</h3>
+        <h3 class="bullet">KDE or Trinity</h3>
+        <h3 class="bullet">XFCE, LXDE, Razor-qt, or Enlightenment</h3>
+        <h3 class="bullet">Something else (e.g. a standalone WM)</h3>
+        <h3 class="bullet">I don't know</h3>
+      </section>
+      <section>
+        <h2>Thanks for humoring me. Now - let's begin.</h2>
+      </section>
+      <section>
+        <h1>Privacy basics (I) - some basic terms</h1>
+      </section>
+      <section>
+        <h2 class="bullet">Let's keep this short.</h2>
+        <h3 class="bullet"><em>Encryption</em> is the process of using a key, like a word or a number, to scramble some text so that it can't be read unless you have the key</h3>
+        <h3 class="bullet"><em>Decryption</em> is the process of using that same key to unscramble the encrypted text</h3>
+        <h3 class="bullet"><em>Plaintext</em> is text that has not been encrypted</h3>
+        <h3 class="bullet"><em>Cryptography</em> is the study and practice of encryption</h3>
+        <h3 class="bullet">We encrypt things to protect our privacy</h3>
+      </section>
+      <section><img src="images/TorLogo.png" width="123" height="181" class="bullet">
+        <h1 class="bullet">Tor</h1>
+      </section>
+      <section>
+        <h2 class="bullet">What is Tor?</h2>
+        <h3 class="bullet">You know in those old movies where some kid is breaking into a computer and it shows the map, with the connection bouncing all around the world?</h3>
+        <h3 class="bullet">That's basically what Tor is.</h3>
+        <h3 class="bullet">Tor anonymizes you by making it seem like your requests for web pages are coming from a random location in the world</h3>
+        <h3 class="bullet">Tor can also help you circumvent censorship</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Using Tor</h2>
+        <h3 class="bullet">Tor isn't useful on its own</h3>
+        <h3 class="bullet">Instead, you use your normal applications - like email, chat and your web browser - and tell them to send all their data through the Tor network instead of the regular Internet.</h3>
+        <h3 class="bullet">For your web browser, you use the Tor Browser Bundle</h3>
+        <h3 class="bullet">For other applications, you use their proxy settings</h3>
+        <h3 class="bullet">For BitTorrent, you do nothing. Don't use BitTorrent with Tor.</h3>
+        <h3 class="bullet">For the truly paranoid, you use TAILS</h3>
+      </section>
+      <section>
+        <h2 class="bullet">The Tor Browser Bundle</h2>
+        <h3 class="bullet">TBB is a browser, based on Firefox, that is preconfigured to use Tor properly</h3>
+        <h3 class="bullet">It will help you connect to the Tor network and remain anonymous online</h3>
+        <h3 class="bullet">However, TBB cannot do everything. You may need to change some of your browsing habits.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">What you need to do</h2>
+        <h3 class="bullet">Don't use browser plugins</h3>
+        <h3 class="bullet">Use HTTPS</h3>
+        <h3 class="bullet">Don't open downloaded documents while online</h3>
+        <h3 class="bullet">Be aware of logging in to websites (there's no point being anonymous if you tell them who you are)</h3>
+      </section>
+      <section>
+        <h2 class="bullet">TAILS, The Amnesiac Incognito Live System</h2>
+        <h3 class="bullet">TAILS is like the TBB, but it works for the entire operating system.</h3>
+        <h3 class="bullet">Instead of starting TAILS from your hard drive, you put TAILS on a CD and start the computer from the CD.</h3>
+        <h3 class="bullet">Nothing in TAILS ever gets written to your hard disk. When you shut down TAILS, it forgets about everything you did.</h3>
+        <h3 class="bullet">The warning about signing into things still applies, but otherwise, TAILS is pretty hassle-free. <em>Everything</em> goes through Tor.</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><img src="images/GetOnDownAndGetEncryptedWithACryptoParty.jpeg" alt="#cryptoparty" width="421" height="272"></section>
+      <section>
+        <h1>Privacy basics (II) - public-key cryptography</h1>
+      </section>
+      <section>
+        <h2 class="bullet">Public key? Shouldn't I keep my keys secret?</h2>
+        <h3 class="bullet">Public-key cryptography refers to encryption systems in which instead of having one key, you have two.</h3>
+        <h3 class="bullet">This is useful because then you don't have to give the same key to all your friends.</h3>
+        <h3 class="bullet">(Imagine you used the key "asdf". You use "asdf" to encrypt emails to Alice and Mallory. Eve can't read your email to Alice, but now Mallory can, because you use the same key for both!)</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Your two keys</h2>
+        <h3 class="bullet">In public-key cryptography, you have two keys. One private (duh), and one public.</h3>
+        <h3 class="bullet">When you encrypt something using your private key, it can only be decrypted using your public key. Your private key won't work for decryption.</h3>
+        <h3 class="bullet">And when someone encrypts something using your public key, it can only be decrypted using your private key.</h3>
+        <h3 class="bullet">There's a whole bunch of math that makes this work. You don't need to worry about that.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Things that public-key cryptography does</h2>
+        <h3 class="bullet">By encrypting something with your private key, you have digitally signed it</h3>
+        <h3 class="bullet">To verify the signature, someone else decrypts it with your public key.</h3>
+        <h3 class="bullet">By encrypting something with another person's public key, you can be sure that no one but them can read it.</h3>
+      </section>
+      <section>
+        <h1>Off-The-Record</h1>
+      </section>
+      <section>
+        <h2 class="bullet">Off-The-Record basics</h2>
+        <h3 class="bullet">Off-The-Record, also known as OTR, takes public-key cryptography and sticks it in chat.</h3>
+        <h3 class="bullet">It encrypts your chat messages so that no one, not even the organization who provides the chat, can read your conversations.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">The tech</h2>
+        <h3 class="bullet">Luckily for you, you don't have to worry about keys when using OTR. OTR will manage them for you.</h3>
+        <h3 class="bullet">You just turn it on, challenge the other person with a question that only they would know (to make sure that it's really them), and talk</h3>
+        <h3 class="bullet">One caveat: OTR only works after the first message. Normally this probably isn't a big deal, unless you are e.g. whistleblowing.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">So how do I use it?</h2>
+        <h3 class="bullet">Get Pidgin and turn on the OTR plugin.</h3>
+        <h3 class="bullet">Start a chat and click on the OTR icon. Follow the prompts.</h3>
+        <h3 class="bullet">Congrats! Your conversation is now encrypted.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Obligatory warning</h2>
+        <h3 class="bullet">If you are a highly-targeted individual, or are especially paranoid, do not use Pidgin.</h3>
+        <h3 class="bullet">Your risks are different and you must act accordingly.</h3>
+        <h3 class="bullet">Talk to me afterwards and I can explain why.</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><img src="images/CC_BY_3.0_state_of_surveillance_by_xp0s3.jpg" alt="cryptoparty.org - refuse the state of surveillance" width="362" height="456"></section>
+      <section><img src="images/GnuPGLogo.svg" class="bullet">
+        <h2 class="bullet">Pretty Good Privacy using GNU Privacy Guard</h2>
+      </section>
+      <section>
+        <h2 class="bullet">Some background</h2>
+        <h3 class="bullet">Originally, PGP referred to two things - PGP the system, and PGP the software</h3>
+        <h3 class="bullet">PGP the software was used to make use of PGP the system</h3>
+        <h3 class="bullet">Nowadays, we don't really use PGP the software. We use the GNU Privacy Guard instead.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">GNU Privacy Guard</h2>
+        <h3 class="bullet">Normally called GPG and occasionally called GnuPG</h3>
+        <h3 class="bullet">GPG is used to access PGP the system, just like PGP the software.</h3>
+        <h3 class="bullet">GPG is different and better than PGP the software in several ways. Most notably, it is free software.</h3>
+        <h3 class="bullet">You don't really need to worry about this. GPG, PGP and OpenPGP (another name for PGP the system) are used interchangeably.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">PGP the system</h2>
+        <h3 class="bullet">Usually known as the Web of Trust</h3>
+        <h3 class="bullet">The Web of Trust is the most difficult to explain of everything here</h3>
+        <h3 class="bullet">I will go slow and do my best to explain. Please stop me right away if I'm not making sense.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Web of Trust basics</h2>
+        <h3 class="bullet">Essentially, the Web of Trust is a way to authenticate who someone else is.</h3>
+        <h3 class="bullet">Put another way, the Web of Trust allows you to verify someone else's identity.</h3>
+        <h3 class="bullet">This works by constructing a chain of trust.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Trust chains</h2>
+        <h3 class="bullet">Trust chains start with who <em>you</em> trust.</h3>
+        <h3 class="bullet">Then they go to whoever is trusted by the people you trust.</h3>
+        <h3 class="bullet">GPG will construct these chains until you eventually get to the person whose identity you're trying to verify.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Trust chain example</h2>
+        <h3 class="bullet">A while back, I met up with Alice in real life, and I verified that her online identity matches her real life identity.</h3>
+        <h3 class="bullet">Now I can trust her online identity, because I've verified that it corresponds to a real person - and more importantly, the correct person.</h3>
+        <h3 class="bullet">Alice has met up with several people in real life, and done the same verification. Bob is one of the people Alice has met up with.</h3>
+        <h3 class="bullet">I'm trying to securely contact Joe. Bob has met up with Joe and verified his identity.</h3>
+        <h3 class="bullet">Because I trust Alice, Alice trusts Bob, and Bob trusts Joe, I can trust Joe.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">From the conceptual to the practical</h2>
+        <h3 class="bullet">When I say "online identity", what I am really talking about is a public key</h3>
+        <h3 class="bullet">On a technical level, the Web of Trust is composed of two things:</h3>
+        <ol>
+          <li>A collection of public keys</li>
+          <li>A collection of signatures on those public keys</li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="bullet">Keysigning</h2>
+        <h3 class="bullet">Every key in the Web of Trust <em>claims</em> to be owned by a real person. That claim may or may not be true.</h3>
+        <h3 class="bullet">In other words, when someone creates their key and fills in their name, they are either lying or not lying.</h3>
+        <h3 class="bullet">The act of signing a key says that you have verified, somehow, that the claim made by a key is the truth.</h3>
+        <h3 class="bullet">Usually, this verification is done by meeting up in real life and comparing government-issued photo ID.</h3>
+        <h3 class="bullet">If you know the person, and know what their voice sounds like, having them read their key ID to you over the phone will also work.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Why is keysigning valuable?</h2>
+        <h3 class="bullet">You want others to sign your keys so that people will know that your key is really yours</h3>
+        <h3 class="bullet">You want to sign others' keys so that GPG is able to construct trust chains to people you haven't met up with yet</h3>
+        <h3 class="bullet">You also should sign others' keys so that you don't appear rude, so that they will sign your key</h3>
+      </section>
+      <section>
+        <h2 class="bullet">A small note on how well you need to know the person</h2>
+        <h3 class="bullet">You do not need to know a person at all to sign their key.</h3>
+        <h3 class="bullet">You can even sign the key of a person you've just met. And, in fact, many people do at keysigning parties.</h3>
+        <h3 class="bullet">Just be aware of how you need to verify their identity. (I will talk about this in just a second.)</h3>
+      </section>
+      <section>
+        <h2 class="bullet">But wait, I hear you say!</h2>
+        <h3 class="bullet">What if I sign the key of a malicious actor? What if someone whose key I've signed signs others' keys without verifying their identity?</h3>
+        <h3 class="bullet">No problem. GPG will actually build more than one trust chain.</h3>
+        <h3 class="bullet">It requires a certain amount of chains, not just one chain, to have checked out before it will trust a key.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Keysigning best practices: for people you do know</h2>
+        <h3 class="bullet">This is the easy part.</h3>
+        <h3 class="bullet">For people you know well, a phone call will suffice. This is because you will recognize their voice - no (regular) texting!</h3>
+        <h3 class="bullet">You can skip the phone call if you have already established a secure conversation with them in some other way. For example, if you've verified their identify over OTR, you can use OTR to send them your key.</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Keysigning best practices: for people you don't know</h2>
+        <h3 class="bullet">For people you <em>don't</em> know as well, it's not nearly as convenient. :(</h3>
+        <h3 class="bullet">At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.</h3>
+        <h3 class="bullet">If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.</h3>
+      </section>
+      <section data-bespoke-state="emphatic"><img src="images/CC_BY_3.0_weak_link_by_xp0s3.jpg" alt="Do not be the weak link - cryptoparty.org" height="371" width="556"></section>
+      <section>
+        <h1>Honourable mentions and other miscellanea</h1>
+      </section>
+      <section>
+        <h2 class="bullet">Honourable mentions</h2>
+        <h3 class="bullet"><a href="https://whispersystems.org/blog/signal/">TextSecure / RedPhone / Signal</a></h3>
+        <h3 class="bullet"><a href="http://thialfihar.org/projects/apg/">APG</a> / <a href="http://www.openkeychain.org/">OpenKeychain</a> & <a href="https://play.google.com/store/apps/details?id=com.fsck.k9">K9</a></h3>
+        <h3 class="bullet"><a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a></h3>
+      </section>
+      <section>
+        <h2>More resources</h2>
+        <h3><a href="https://prism-break.org/en/">PRISM Break</a></h3>
+        <h3>Reset the Net's <a href="https://pack.resetthenet.org/">Privacy Pack</a></h3>
+        <h3>Free Software Foundation's <a href="https://emailselfdefense.fsf.org/en/">Email Self Defense</a></h3>
+        <h3><a href="https://cryptoparty.in/">CryptoParty website</a></h3>
+      </section>
+      <section>
+        <h2>Attributions</h2>
+        <h3>CryptoParty logo - public domain (CC0)</h3>
+        <h3>Tor logo - The Tor Project, Inc. - CC Attribution 3.0 US</h3>
+        <h3>State of surveillance - xp0s3 - CC BY 3.0</h3>
+        <h3>GnuPG logo - </h3>
+        <h3>Weak link - xp0s3 - CC BY 3.0</h3>
+        <h3>Slideshow built using Bespoke.js</h3>
+      </section>
+      <section>
+        <h1>Keysigning party</h1>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
