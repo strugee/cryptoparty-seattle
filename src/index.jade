@@ -99,7 +99,7 @@ html
 				h3.bullet For your web browser, you use the Tor Browser Bundle
 				h3.bullet For other applications, you use their proxy settings
 				h3.bullet For BitTorrent, you do nothing. Don't use BitTorrent with Tor.
-				h3.bullet For the truly paranoid, you use TAILS
+				h3.bullet For the truly paranoid, you use Tails
 
 			section
 				h2.bullet The Tor Browser Bundle
@@ -115,11 +115,20 @@ html
 				h3.bullet Be aware of logging in to websites (there's no point being anonymous if you tell them who you are)
 
 			section
-				h2.bullet TAILS, The Amnesiac Incognito Live System
-				h3.bullet TAILS is like the TBB, but it works for the entire operating system.
-				h3.bullet Instead of starting TAILS from your hard drive, you put TAILS on a CD and start the computer from the CD.
-				h3.bullet Nothing in TAILS ever gets written to your hard disk. When you shut down TAILS, it forgets about everything you did.
-				h3.bullet The warning about signing into things still applies, but otherwise, TAILS is pretty hassle-free. <em>Everything</em> goes through Tor.
+				h2.bullet Tails, The Amnesiac Incognito Live System
+				h3.bullet Tails is like the TBB, but it works for the entire operating system.
+				h3.bullet Instead of starting Tails from your hard drive, you put Tails on a CD and start the computer from the CD.
+				h3.bullet Nothing in Tails ever gets written to your hard disk unless you tell it to. When you shut down Tails, it forgets about everything you did.
+				h3.bullet It is advisable to start fresh when moving on to the next task by restarting Tails.
+				h3.bullet The warning about signing into things still applies, but otherwise, Tails is pretty hassle-free. <em>Everything</em> goes through Tor.
+
+			section
+				h2.bullet Getting Tor
+				h3.bullet <a href="https://www.torproject.org/download/download-easy.html.en">Download</a> the Tor Browser Bundle and unpack to your desktop. It is self-contained, no need to install
+				h3.bullet If you are paranoid you may wish to <a href="https://www.torproject.org/docs/verifying-signatures.html.en">verify its signature</a> to ensure it hasn't been tampered with
+				h3.bullet Download Tails from <a href="https://tails.boum.org/">here</a> and <a href="https://tails.boum.org/getting_started/index.en.html">put it on a USB drive or a CD</a>. Be aware of what it <a href="https://tails.boum.org/doc/about/warning/index.en.html">does not do for you</a>.
+				h3.bullet For Android, you can get Orbot from the <a href="https://play.google.com/store/apps/details?id=org.torproject.android">Google Play Store</a> or from <a href="https://f-droid.org/">F-Droid</a>. F-Droid is recommended to ensure it hasn't been tampered with.
+				h3.bullet The Tor wiki has a <a href="https://trac.torproject.org/projects/tor/wiki#UsingTorwith">section</a> detailing how to get and use Tor with other software.
 
 			section(data-bespoke-state='emphatic')
 				img(src='images/GetOnDownAndGetEncryptedWithACryptoParty.jpeg', alt='#cryptoparty', width='421', height='272')
@@ -162,7 +171,7 @@ html
 
 			section
 				h2.bullet So how do I use it?
-				h3.bullet Get Pidgin and turn on the OTR plugin.
+				h3.bullet Get <a href="https://pidgin.im">Pidgin</a> or <a href="https://adium.im/">Adium</a> (for Macs) and turn on the OTR plugin.
 				h3.bullet Start a chat and click on the OTR icon. Follow the prompts.
 				h3.bullet Congrats! Your conversation is now encrypted.
 
@@ -264,6 +273,30 @@ html
 				h3.bullet At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.
 				h3.bullet If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.
 
+			section
+				h2.bullet Creating a key
+				h3.bullet The defaults are good
+				h3.bullet <a href="https://www.debian-administration.org/users/dkg/weblog/97">Don't enter anything in the Comment field</a>
+				h3.bullet Generate a revocation certificate
+				h3.bullet Back up your key and your revocation certificate
+				h3.bullet Never, ever give your key to any person or company, even if it has a password. If a website asks you to upload your key, be suspicious.
+				h3.bullet Demo
+
+			section
+				h2.bullet Getting GPG
+				h3.bullet For Windows, get <a href="http://www.gpg4win.org/">Gpg4Win</a> (for the paranoid, <a href="http://www.gpg4win.org/package-integrity.html">verify</a> the downloads)
+				h3.bullet For Mac OS X, get <a href="https://gpgtools.org/">GpgTools</a> (for the paranoid, <a href="https://www.gnupg.org/download/integrity_check.html">verify</a> the SHA1 hash. Talk to me afterwards.)
+				h3.bullet For pretty much everything on GNU/Linux, you want to use GNOME Keyring. This is probably already installed; if not, use your package manager's software installation tool to install it.
+				h3.bullet For KDE/Trinity, use either Kleopatra or KGpg.
+
+			section
+				h2.bullet Using GPG
+				h3.bullet If you use your Mac's builtin Mail application, then GpgTools has provided a plugin for using GPG.
+				h3.bullet For pretty much everyone else, I recommend using <a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird</a> with <a href="https://www.enigmail.net/home/index.php">Enigmail</a>.
+				h3.bullet For some GNU/Linux systems, Thunderbird may be called Icedove. It works the exact same way.
+				h3.bullet If you use Gmail, keep an eye on Google's <a href="https://code.google.com/p/end-to-end/">End-to-End</a> - it's not ready yet, but you can start using it when it's in the Chrome Web Store.
+				h3.bullet In the mean time, use Thunderbird.
+
 			section(data-bespoke-state='emphatic')
 				img(src='images/CC_BY_3.0_weak_link_by_xp0s3.jpg', alt='Do not be the weak link - cryptoparty.org', height='371', width='556')
 
@@ -299,5 +332,12 @@ html
 
 			section
 				h1 Keysigning party
+
+			section
+				h2 Access this presentation again
+				h3 https://strugee.github.io/cryptoparty-seattle/
+				p
+					img(src='images/qr.gif', alt="QR Code")
+				h4 ...or <a href="https://github.com/strugee/cryptoparty-seattle/">get the source code</a>
 
 		script(src='build/build.js')
