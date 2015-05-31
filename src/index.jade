@@ -24,9 +24,8 @@ html
 				h3.bullet But you can call me AJ.
 
 			section
-				h2 Huge thanks to Black Coffee
-				h3 They're hosting this event for free.
-				h3 Please consider buying food and drink from them. I've tried it before. It's all awesome.
+				h2 Huge thanks to UW
+				h3 And to Peter.
 
 			section
 				h2 Roadmap
@@ -71,7 +70,8 @@ html
 				h3.bullet I don't know
 
 			section
-				h2 Thanks for humoring me. Now - let's begin.
+				h2 Thanks for humoring me.
+				h2 Now - let's begin.
 
 			section
 				h1 Privacy basics (I) - some basic terms
@@ -140,31 +140,24 @@ html
 				h1 Privacy basics (II) - public-key cryptography
 
 			section
-				h2.bullet Public key? Shouldn't I keep my keys secret?
-				h3.bullet Public-key cryptography refers to encryption systems in which instead of having one key, you have two.
-				h3.bullet This is useful because then you don't have to give the same key to all your friends.
-				h3.bullet (Imagine you used the key "asdf". You use "asdf" to encrypt emails to Alice and Mallory. Eve can't read your email to Alice, but now Mallory can, because you use the same key for both!)
-
-			section
 				h2.bullet Your two keys
-				h3.bullet In public-key cryptography, you have two keys. One private (duh), and one public.
+				h3.bullet In modern privacy systems, you have two keys. One private, and one public.
 				h3.bullet When you encrypt something using your private key, it can only be decrypted using your public key. Your private key won't work for decryption.
 				h3.bullet And when someone encrypts something using your public key, it can only be decrypted using your private key.
 				h3.bullet There's a whole bunch of math that makes this work. You don't need to worry about that.
 
 			section
-				h2.bullet Things that public-key cryptography does
-				h3.bullet By encrypting something with your private key, you have digitally signed it
-				h3.bullet To verify the signature, someone else decrypts it with your public key.
-				h3.bullet By encrypting something with another person's public key, you can be sure that no one but them can read it.
+				h2.bullet Stuff you can do with two keys
+				h3.bullet Digital signatures
+				h3.bullet Encryption
 
 			section
 				h1 Off-The-Record
 
 			section
 				h2.bullet Off-The-Record basics
-				h3.bullet Off-The-Record, also known as OTR, takes public-key cryptography and sticks it in chat.
-				h3.bullet It encrypts your chat messages so that no one, not even the organization who provides the chat, can read your conversations.
+				h3.bullet Off-The-Record, also known as OTR, takes cryptography and sticks it in chat.
+				h3.bullet It encrypts your chat messages so that no one, not even the organization who provides the chat service, can read your conversations.
 
 			section
 				h2.bullet The tech
@@ -193,76 +186,33 @@ html
 
 			section
 				h2.bullet Some background
-				h3.bullet Originally, PGP referred to two things - PGP the system, and PGP the software
-				h3.bullet PGP the software was used to make use of PGP the system
-				h3.bullet Nowadays, we don't really use PGP the software. We use the GNU Privacy Guard instead.
+				h3.bullet OpenPGP, GPG and PGP are basically the same thing.
+				h3.bullet GPG is different and better than PGP in several ways. Most notably, it is free software.
+				h3.bullet You don't really need to worry about this.
 
 			section
-				h2.bullet GNU Privacy Guard
-				h3.bullet Normally called GPG and occasionally called GnuPG
-				h3.bullet GPG is used to access PGP the system, just like PGP the software.
-				h3.bullet GPG is different and better than PGP the software in several ways. Most notably, it is free software.
-				h3.bullet You don't really need to worry about this. GPG, PGP and OpenPGP (another name for PGP the system) are used interchangeably.
-
-			section
-				h2.bullet PGP the system
-				h3.bullet Usually known as the Web of Trust
-				h3.bullet The Web of Trust is the most difficult to explain of everything here
-				h3.bullet I will go slow and do my best to explain. Please stop me right away if I'm not making sense.
-
-			section
-				h2.bullet Web of Trust basics
-				h3.bullet Essentially, the Web of Trust is a way to authenticate who someone else is.
-				h3.bullet Put another way, the Web of Trust allows you to verify someone else's identity.
-				h3.bullet This works by constructing a chain of trust.
-
-			section
-				h2.bullet Trust chains
-				h3.bullet Trust chains start with who <em>you</em> trust.
-				h3.bullet Then they go to whoever is trusted by the people you trust.
-				h3.bullet GPG will construct these chains until you eventually get to the person whose identity you're trying to verify.
-
-			section
-				h2.bullet Trust chain example
-				h3.bullet A while back, I met up with Alice in real life, and I verified that her online identity matches her real life identity.
-				h3.bullet Now I can trust her online identity, because I've verified that it corresponds to a real person - and more importantly, the correct person.
-				h3.bullet Alice has met up with several people in real life, and done the same verification. Bob is one of the people Alice has met up with.
-				h3.bullet I'm trying to securely contact Joe. Bob has met up with Joe and verified his identity.
-				h3.bullet Because I trust Alice, Alice trusts Bob, and Bob trusts Joe, I can trust Joe.
-
-			section
-				h2.bullet From the conceptual to the practical
-				h3.bullet When I say "online identity", what I am really talking about is a public key
-				h3.bullet On a technical level, the Web of Trust is composed of two things:
-				ol
-					li A collection of public keys
-					li A collection of signatures on those public keys
+				h2.bullet The Web of Trust
+				h3.bullet PGP is built upon a "web of trust".
+				h3.bullet The basic idea is that if I trust Alice, and Alice trusts Bob, then I can trust Bob.
+				h3.bullet The Web of Trust does this for keys. Think of them as like online identities.
 
 			section
 				h2.bullet Keysigning
 				h3.bullet Every key in the Web of Trust <em>claims</em> to be owned by a real person. That claim may or may not be true.
 				h3.bullet In other words, when someone creates their key and fills in their name, they are either lying or not lying.
 				h3.bullet The act of signing a key says that you have verified, somehow, that the claim made by a key is the truth.
-				h3.bullet Usually, this verification is done by meeting up in real life and comparing government-issued photo ID.
-				h3.bullet If you know the person, and know what their voice sounds like, having them read their key ID to you over the phone will also work.
 
 			section
 				h2.bullet Why is keysigning valuable?
 				h3.bullet You want others to sign your keys so that people will know that your key is really yours
-				h3.bullet You want to sign others' keys so that GPG is able to construct trust chains to people you haven't met up with yet
+				h3.bullet You want to sign others' keys so that GPG is able to construct chains of trust to people you haven't met up with yet
 				h3.bullet You also should sign others' keys so that you don't appear rude, so that they will sign your key
 
 			section
 				h2.bullet A small note on how well you need to know the person
 				h3.bullet You do not need to know a person at all to sign their key.
 				h3.bullet You can even sign the key of a person you've just met. And, in fact, many people do at keysigning parties.
-				h3.bullet Just be aware of how you need to verify their identity. (I will talk about this in just a second.)
-
-			section
-				h2.bullet But wait, I hear you say!
-				h3.bullet What if I sign the key of a malicious actor? What if someone whose key I've signed signs others' keys without verifying their identity?
-				h3.bullet No problem. GPG will actually build more than one trust chain.
-				h3.bullet It requires a certain amount of chains, not just one chain, to have checked out before it will trust a key.
+				h3.bullet Just be aware of how you need to verify their identity.
 
 			section
 				h2.bullet Keysigning best practices: for people you do know
@@ -275,6 +225,7 @@ html
 				h3.bullet For people you <em>don't</em> know as well, it's not nearly as convenient. :(
 				h3.bullet At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.
 				h3.bullet If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.
+				h3.bullet Do not upload signatures yourself. Instead, email them to the person, to verify their email.
 
 			section
 				h2.bullet Creating a key
