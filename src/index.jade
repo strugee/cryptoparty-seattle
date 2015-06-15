@@ -16,7 +16,7 @@ html
 
 			section
 				img#cryptoparty-logo(src='images/CryptoPartyLogo.svg' alt='CryptoParty')
-				h1 Seattle
+				h1 Seattle (Redux)
 
 			section
 				h2 Welcome!
@@ -24,8 +24,9 @@ html
 				h3.bullet But you can call me AJ.
 
 			section
-				h2 Huge thanks to UW
-				h3 And to Peter.
+				h2 Huge thanks to UW, and to Peter
+				h3 They're hosting this event for free.
+				h3 Also thanks to Lee Fisher, for the pizza
 
 			section
 				h2 Roadmap
@@ -58,7 +59,7 @@ html
 				h3.bullet Windows
 				h3.bullet Mac OS X
 				h3.bullet GNU/Linux (e.g. Ubuntu, Elementary, Debian, Mint, Fedora, OpenSUSE, etc...)
-				h3.bullet Something else ([Free,Net,Open,PC-,*]BSD, Solaris, Illumos, GNU/Hurd, System V R4, Haiku, DOS, etc...)
+				h3.bullet Something else ([Free,Net,Open,PC-,*]BSD, Solaris, Illumos, Haiku, DOS, etc...)
 				h3.bullet I don't know
 
 			section
@@ -70,11 +71,7 @@ html
 				h3.bullet I don't know
 
 			section
-				h2 Thanks for humoring me.
-				h2 Now - let's begin.
-
-			section
-				h1 Privacy basics (I) - some basic terms
+				h1 Privacy basics (I)
 
 			section
 				h2.bullet Let's keep this short.
@@ -83,6 +80,15 @@ html
 				h3.bullet <em>Plaintext</em> is text that has not been encrypted
 				h3.bullet <em>Cryptography</em> is the study and practice of encryption
 				h3.bullet We encrypt things to protect our privacy
+
+				
+			section
+				h2.bullet Your threat model
+				h3.bullet Much as I would like to, I can't magically tell you what's right
+				h3.bullet Basically, a threat model is what <em>your</em> adversary looks like
+				h3.bullet You need to figure out your own threat model and base decisions on it
+				h3.bullet For most people this isn't a big deal
+				h3.bullet Activists, however, should pay special attention.
 
 			section
 				img.bullet(src='images/TorLogo.png', width='123', height='181')
@@ -113,7 +119,6 @@ html
 			section
 				h2.bullet What you need to do
 				h3.bullet Don't use browser plugins
-				h3.bullet Use HTTPS
 				h3.bullet Don't open downloaded documents while online
 				h3.bullet Be aware of logging in to websites (there's no point being anonymous if you tell them who you are)
 
@@ -137,33 +142,33 @@ html
 				img(src='images/GetOnDownAndGetEncryptedWithACryptoParty.jpeg', alt='#cryptoparty', width='421', height='272')
 
 			section
-				h1 Privacy basics (II) - public-key cryptography
+				h1 Privacy basics (II)
 
 			section
-				h2.bullet Your two keys
-				h3.bullet In modern privacy systems, you have two keys. One private, and one public.
-				h3.bullet When you encrypt something using your private key, it can only be decrypted using your public key. Your private key won't work for decryption.
-				h3.bullet And when someone encrypts something using your public key, it can only be decrypted using your private key.
-				h3.bullet There's a whole bunch of math that makes this work. You don't need to worry about that.
+				h2.bullet Public key cryptography
+				h3.bullet Instead of having one key, you have two
+				h3.bullet One private, one public
+				h3.bullet Most systems use this idea nowadays
 
 			section
 				h2.bullet Stuff you can do with two keys
 				h3.bullet Digital signatures
-				h3.bullet Encryption
+				h3.bullet Fine-grained encryption
 
 			section
 				h1 Off-The-Record
 
 			section
 				h2.bullet Off-The-Record basics
-				h3.bullet Off-The-Record, also known as OTR, takes cryptography and sticks it in chat.
-				h3.bullet It encrypts your chat messages so that no one, not even the organization who provides the chat service, can read your conversations.
+				h3.bullet IM + privacy = Off-The-Record
+				h3.bullet OTR encrypts your chat messages so that no one read your conversations.
+				h3.bullet Not even the chat service.
 
 			section
 				h2.bullet The tech
-				h3.bullet Luckily for you, you don't have to worry about keys when using OTR. OTR will manage them for you.
+				h3.bullet OTR manages your keys for you.
 				h3.bullet You just turn it on, challenge the other person with a question that only they would know (to make sure that it's really them), and talk
-				h3.bullet One caveat: OTR only works after the first message. Normally this probably isn't a big deal, unless you are e.g. whistleblowing.
+				h3.bullet One caveat: OTR only works after the first message. (Consult your threat model.)
 
 			section
 				h2.bullet So how do I use it?
@@ -182,31 +187,24 @@ html
 
 			section
 				img.bullet(src='images/GnuPGLogo.svg')
-				h2.bullet Pretty Good Privacy using GNU Privacy Guard
 
 			section
 				h2.bullet Some background
-				h3.bullet OpenPGP, GPG and PGP are basically the same thing.
-				h3.bullet GPG is different and better than PGP in several ways. Most notably, it is free software.
-				h3.bullet You don't really need to worry about this.
+				h3.bullet GPG = GnuPG = PGP = OpenPGP
+				h3.bullet PGP is used to protect emails
 
 			section
-				h2.bullet The Web of Trust
-				h3.bullet PGP is built upon a "web of trust".
-				h3.bullet The basic idea is that if I trust Alice, and Alice trusts Bob, then I can trust Bob.
-				h3.bullet The Web of Trust does this for keys. Think of them as like online identities.
+				h2.bullet Web of Trust basics
+				h3.bullet The Web of Trust is something we use in PGP
+				h3.bullet Essentially, it's a way to distribute and authenticate keys.
+				h3.bullet Put another way, the Web of Trust allows you to retrieve and verify someone else's identity.
 
 			section
 				h2.bullet Keysigning
-				h3.bullet Every key in the Web of Trust <em>claims</em> to be owned by a real person. That claim may or may not be true.
-				h3.bullet In other words, when someone creates their key and fills in their name, they are either lying or not lying.
-				h3.bullet The act of signing a key says that you have verified, somehow, that the claim made by a key is the truth.
-
-			section
-				h2.bullet Why is keysigning valuable?
-				h3.bullet You want others to sign your keys so that people will know that your key is really yours
-				h3.bullet You want to sign others' keys so that GPG is able to construct chains of trust to people you haven't met up with yet
-				h3.bullet You also should sign others' keys so that you don't appear rude, so that they will sign your key
+				h3.bullet Keysigning: the act of creating a digital signature of someone else's key
+				h3.bullet You want to sign people's keys, to verify others' keys
+				h3.bullet You want others to sign your keys, so others can verify your key
+				h3.bullet Unless you have a problem with the government knowing your social graph.
 
 			section
 				h2.bullet A small note on how well you need to know the person
@@ -215,17 +213,19 @@ html
 				h3.bullet Just be aware of how you need to verify their identity.
 
 			section
-				h2.bullet Keysigning best practices: for people you do know
+				h2.bullet Keysigning best practices: for people you <em>do</em> know
 				h3.bullet This is the easy part.
-				h3.bullet For people you know well, a phone call will suffice. This is because you will recognize their voice - no (regular) texting!
-				h3.bullet You can skip the phone call if you have already established a secure conversation with them in some other way. For example, if you've verified their identify over OTR, you can use OTR to send them your key.
+				h3.bullet A phone call will suffice. This is because you will recognize their voice - no (regular) texting!
+				h3.bullet You can skip the phone call if you have already established a secure conversation with them in some other way.
+				h3.bullet For example, if you've verified their identify over OTR, you can use OTR to send them your key.
 
 			section
-				h2.bullet Keysigning best practices: for people you don't know
-				h3.bullet For people you <em>don't</em> know as well, it's not nearly as convenient. :(
+				h2.bullet Keysigning best practices: for people you <em>don't</em> know
+				h3.bullet This isn't nearly as convenient. :(
 				h3.bullet At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.
-				h3.bullet If you want to be really paranoid, require two forms of ID. But for the casual user, one will suffice.
-				h3.bullet Do not upload signatures yourself. Instead, email them to the person, to verify their email.
+				h3.bullet Compare photo ID to them, and compare the name on the ID to the name on the key
+				h3.bullet If possible, send your signature to them instead of uploading it.
+				h3.bullet (If you're using GNU/Linux, you can use caff.)
 
 			section
 				h2.bullet Creating a key
@@ -234,12 +234,11 @@ html
 				h3.bullet Generate a revocation certificate
 				h3.bullet Back up your key and your revocation certificate
 				h3.bullet Never, ever give your key to any person or company, even if it has a password. If a website asks you to upload your key, be suspicious.
-				h3.bullet Demo
 
 			section
 				h2.bullet Getting GPG
-				h3.bullet For Windows, get <a href="http://www.gpg4win.org/">Gpg4Win</a> (for the paranoid, <a href="http://www.gpg4win.org/package-integrity.html">verify</a> the downloads)
-				h3.bullet For Mac OS X, get <a href="https://gpgtools.org/">GpgTools</a> (for the paranoid, <a href="https://www.gnupg.org/download/integrity_check.html">verify</a> the SHA1 hash. Talk to me afterwards.)
+				h3.bullet For Windows, get <a href="http://www.gpg4win.org/">Gpg4Win</a>
+				h3.bullet For Mac OS X, get <a href="https://gpgtools.org/">GpgTools</a>
 				h3.bullet For pretty much everything on GNU/Linux, you want to use GNOME Keyring. This is probably already installed; if not, use your package manager's software installation tool to install it.
 				h3.bullet For KDE/Trinity, use either Kleopatra or KGpg.
 
@@ -248,8 +247,6 @@ html
 				h3.bullet If you use your Mac's builtin Mail application, then GpgTools has provided a plugin for using GPG.
 				h3.bullet For pretty much everyone else, I recommend using <a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird</a> with <a href="https://www.enigmail.net/home/index.php">Enigmail</a>.
 				h3.bullet For some GNU/Linux systems, Thunderbird may be called Icedove. It works the exact same way.
-				h3.bullet If you use Gmail, keep an eye on Google's <a href="https://code.google.com/p/end-to-end/">End-to-End</a> - it's not ready yet, but you can start using it when it's in the Chrome Web Store.
-				h3.bullet In the mean time, use Thunderbird.
 
 			section(data-bespoke-state='emphatic')
 				img(src='images/CC_BY_3.0_weak_link_by_xp0s3.jpg', alt='Do not be the weak link - cryptoparty.org', height='371', width='556')
@@ -260,7 +257,7 @@ html
 			section
 				h2.bullet Honourable mentions
 				h3.bullet <a href="https://whispersystems.org/blog/signal/">TextSecure / RedPhone / Signal</a>
-				h3.bullet <a href="http://thialfihar.org/projects/apg/">APG</a> / <a href="http://www.openkeychain.org/">OpenKeychain</a> & <a href="https://play.google.com/store/apps/details?id=com.fsck.k9">K9</a>
+				h3.bullet <a href="http://www.openkeychain.org/">OpenKeychain</a> & <a href="https://play.google.com/store/apps/details?id=com.fsck.k9">K9</a>
 				h3.bullet <a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>
 				h3.bullet <a href="https://duckduckgo.com/">DuckDuckGo</a>
 
@@ -273,7 +270,7 @@ html
 
 			section
 				h2 Questions?
-				h3 Email me at <a href="mailto:strugee+cryptoparty@member.fsf.org">strugee+cryptoparty@member.fsf.org</a>
+				h3 Email me at <a href="mailto:alex@strugee.net">alex@strugee.net</a>
 				h3 Or just shout it out right now
 
 			section
