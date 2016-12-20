@@ -12,7 +12,7 @@
   <body>
     <article>
       <section><img id="cryptoparty-logo" src="images/CryptoPartyLogo.svg" alt="CryptoParty">
-        <h1>Seattle (Redux)</h1>
+        <h1>Seattle III</h1>
       </section>
       <section>
         <h2>Welcome!</h2>
@@ -22,7 +22,6 @@
       <section>
         <h2>Huge thanks to UW, and to Peter</h2>
         <h3>They're hosting this event for free.</h3>
-        <h3>Also thanks to Lee Fisher, for the pizza</h3>
       </section>
       <section>
         <h2>Roadmap</h2>
@@ -34,51 +33,42 @@
         <h3>Privacy basics (part II)</h3>
         <h3>Off-The-Record (OTR)</h3>
         <hr>
-        <h3>Pretty Good Privacy (PGP) & GNU Privacy Guard (GnuPG, aka GPG)</h3>
+        <h3>Signal</h3>
         <hr>
-        <h3>Honourable mentions and other miscellanea</h3>
-        <h3>Keysigning party</h3>
+        <h3>Honourable mentions</h3>
       </section>
       <section>
-        <h1>But first, a note and a survey</h1>
-      </section>
-      <section>
-        <h2>Talk to me! (This is the note part)</h2>
-        <h3>I want this to be more of a conversation than a presentation. Me reading off the slides is boring.</h3>
+        <h2>By the way</h2>
+        <h3>Talk to me!</h3>
         <h3>Feedback, questions, jokes, whatever. (And yes, there are no dumb questions.)</h3>
         <h3>Am I boring you? Tell me!</h3>
       </section>
       <section>
-        <h2>Now, the survey</h2>
-      </section>
-      <section>
         <h2 class="bullet">Raise your hand if you use...</h2>
         <h3 class="bullet">Windows</h3>
-        <h3 class="bullet">Mac OS X</h3>
-        <h3 class="bullet">GNU/Linux (e.g. Ubuntu, Elementary, Debian, Mint, Fedora, OpenSUSE, etc...)</h3>
-        <h3 class="bullet">Something else ([Free,Net,Open,PC-,*]BSD, Solaris, Illumos, Haiku, DOS, etc...)</h3>
-        <h3 class="bullet">I don't know</h3>
-      </section>
-      <section>
-        <h3 class="bullet"><strong>Cool. Raise your hand again if you use GNU/Linux or something else, and prefer...</strong></h3>
-        <h3 class="bullet">GNOME, Unity, Pantheon (Elementary OS), MATE, or Cinammon</h3>
-        <h3 class="bullet">KDE or Trinity</h3>
-        <h3 class="bullet">XFCE, LXDE, Razor-qt, or Enlightenment</h3>
-        <h3 class="bullet">Something else (e.g. a standalone WM)</h3>
+        <h3 class="bullet">macOS</h3>
+        <h3 class="bullet">GNU/Linux (e.g. Ubuntu, Debian, Fedora, etc...)</h3>
+        <h3 class="bullet">Something else (e.g. a BSD)</h3>
         <h3 class="bullet">I don't know</h3>
       </section>
       <section>
         <h1>Why privacy?</h1>
       </section>
       <section>
-        <h2 class="bullet">The world today</h2>
-        <h3 class="bullet">We have problems</h3>
+        <h2 class="bullet">Democracy</h2>
+        <h3 class="bullet">Breaking laws is an important part of democracy</h3>
+        <h3 class="bullet">Example: sit-ins</h3>
+        <h3 class="bullet">If no one ever broke unjust laws, we wouldn't know why they were bad</h3>
+        <h3 class="bullet">It's about balance</h3>
+      </section>
+      <section>
+        <h2 class="bullet">Activism</h2>
         <h3 class="bullet">Some people are activists</h3>
         <h3 class="bullet">Not many people use privacy tools</h3>
       </section>
       <section><img src="images/SocialGraph.svg" width="584.23" height="397.33"></section>
       <section>
-        <h2 class="bullet">Everyone as a target</h2>
+        <h2 class="bullet">Scenario: <em>no one</em> uses privacy tools</h2>
         <h3 class="bullet">In this scenario, everyone is a target</h3>
         <h3 class="bullet">The government analyzes everyone's conversations...</h3>
         <h3 class="bullet">and figures out who the activists are</h3>
@@ -115,30 +105,36 @@
       </section>
       <section>
         <h2 class="bullet">Your threat model</h2>
-        <h3 class="bullet">Much as I would like to, I can't magically tell you what's right</h3>
-        <h3 class="bullet">Basically, a threat model is what <em>your</em> adversary looks like</h3>
+        <h3 class="bullet">Threat modeling is about defining the problem you're trying to solve</h3>
+        <h3 class="bullet">For example: "I expect that I only have to worry about mass surveillance."</h3>
+        <h3 class="bullet">Alternately: "I'm assuming that I have been specifically targeted for surveillance by the state."</h3>
         <h3 class="bullet">You need to figure out your own threat model and base decisions on it</h3>
-        <h3 class="bullet">For most people this isn't a big deal</h3>
-        <h3 class="bullet">Activists, however, should pay special attention.</h3>
       </section>
-      <section><img src="images/TorLogo.png" width="123" height="181" class="bullet">
+      <section>
+        <h2 class="bullet">My assumptions</h2>
+        <h3 class="bullet">I'm assuming your threat model includes only mass surveillance.</h3>
+        <h3 class="bullet">Otherwise, these suggestions are a good start, but not all you need.</h3>
+        <h3 class="bullet">If you're an investigative journalist, the tools showed here <strong>are not good enough</strong>.</h3>
+        <h3 class="bullet">If you're heavily involved in activism, the tools showed here <strong>are not good enough</strong>.</h3>
+      </section>
+      <section><img src="images/TorLogo.png" width="123" height="181" class="bullet regular-image">
         <h1 class="bullet">Tor</h1>
       </section>
       <section>
         <h2 class="bullet">What is Tor?</h2>
         <h3 class="bullet">You know in those old movies where some kid is breaking into a computer and it shows the map, with the connection bouncing all around the world?</h3>
         <h3 class="bullet">That's basically what Tor is.</h3>
-        <h3 class="bullet">Tor anonymizes you by making it seem like your requests for web pages are coming from a random location in the world</h3>
+        <h3 class="bullet">Tor anonymizes you by making it seem like your Internet traffic is coming from a random location in the world</h3>
         <h3 class="bullet">Tor can also help you circumvent censorship</h3>
       </section>
       <section>
         <h2 class="bullet">Using Tor</h2>
         <h3 class="bullet">Tor isn't useful on its own</h3>
-        <h3 class="bullet">Instead, you use your normal applications - like email, chat and your web browser - and tell them to send all their data through the Tor network instead of the regular Internet.</h3>
+        <h3 class="bullet">You use normal applications - like email, chat and your web browser - and tell them to send data through the Tor network instead of the regular Internet.</h3>
         <h3 class="bullet">For your web browser, you use the Tor Browser Bundle</h3>
         <h3 class="bullet">For other applications, you use their proxy settings</h3>
         <h3 class="bullet">For BitTorrent, you do nothing. Don't use BitTorrent with Tor.</h3>
-        <h3 class="bullet">For the truly paranoid, you use Tails</h3>
+        <h3 class="bullet">For even higher security, you use Tails</h3>
       </section>
       <section>
         <h2 class="bullet">The Tor Browser Bundle</h2>
@@ -150,21 +146,21 @@
         <h2 class="bullet">What you need to do</h2>
         <h3 class="bullet">Don't use browser plugins</h3>
         <h3 class="bullet">Don't open downloaded documents while online</h3>
-        <h3 class="bullet">Be aware of logging in to websites (there's no point being anonymous if you tell them who you are)</h3>
+        <h3 class="bullet">Be aware of logging in to websites (you aren't anonymous if you tell them who you are)</h3>
       </section>
       <section>
         <h2 class="bullet">Tails, The Amnesiac Incognito Live System</h2>
-        <h3 class="bullet">Tails is like the TBB, but it works for the entire operating system.</h3>
-        <h3 class="bullet">Instead of starting Tails from your hard drive, you put Tails on a CD and start the computer from the CD.</h3>
-        <h3 class="bullet">When you shut down Tails, it forgets about everything you did.</h3>
-        <h3 class="bullet">Start fresh when moving on to the next task by restarting Tails.</h3>
-        <h3 class="bullet">The warning about signing into things still applies, but otherwise, Tails is pretty hassle-free. <em>Everything</em> goes through Tor.</h3>
+        <h3 class="bullet">Tails is like the TBB, but it works for the entire computer</h3>
+        <h3 class="bullet">Instead of starting Tails from your hard drive, you put Tails on a CD and start the computer from the CD</h3>
+        <h3 class="bullet">When you shut down Tails, it forgets everything you did</h3>
+        <h3 class="bullet">Restart Tails inbetween tasks</h3>
+        <h3 class="bullet">The warning about signing into things still applies</h3>
       </section>
       <section>
         <h2 class="bullet">Getting Tor</h2>
         <h3 class="bullet"><a href="https://www.torproject.org/download/download-easy.html.en">Download</a> the Tor Browser Bundle and unpack to your desktop. It is self-contained, no need to install</h3>
-        <h3 class="bullet">If you are paranoid you may wish to <a href="https://www.torproject.org/docs/verifying-signatures.html.en">verify its signature</a> to ensure it hasn't been tampered with</h3>
-        <h3 class="bullet">Download Tails from <a href="https://tails.boum.org/">here</a> and <a href="https://tails.boum.org/getting_started/index.en.html">put it on a USB drive or a CD</a>. Be aware of what it <a href="https://tails.boum.org/doc/about/warning/index.en.html">does not do for you</a>.</h3>
+        <h3 class="bullet">If you need extra security you may wish to <a href="https://www.torproject.org/docs/verifying-signatures.html.en">verify its signature</a> to ensure it hasn't been tampered with</h3>
+        <h3 class="bullet">Download Tails from <a href="https://tails.boum.org/">here</a> and <a href="https://tails.boum.org/getting_started/index.en.html">put it on a USB drive or a CD</a>. Be aware of what it <a href="https://tails.boum.org/doc/about/warning/index.en.html">doesn't do for you</a>.</h3>
         <h3 class="bullet">For Android, you can get Orbot from the <a href="https://play.google.com/store/apps/details?id=org.torproject.android">Google Play Store</a> or from <a href="https://f-droid.org/">F-Droid</a> (recommended).</h3>
         <h3 class="bullet">The Tor wiki has a <a href="https://trac.torproject.org/projects/tor/wiki#UsingTorwith">section</a> detailing how to get and use Tor with other software.</h3>
       </section>
@@ -223,82 +219,55 @@
         <h2>Exercise: enabling OTR</h2>
       </section>
       <section data-bespoke-state="emphatic"><img src="images/CC_BY_3.0_state_of_surveillance_by_xp0s3.jpg" alt="cryptoparty.org - refuse the state of surveillance" width="362" height="456"></section>
-      <section><img src="images/GnuPGLogo.svg" class="bullet"></section>
-      <section>
-        <h2 class="bullet">Some background</h2>
-        <h3 class="bullet">GPG = GnuPG = PGP = OpenPGP</h3>
-        <h3 class="bullet">PGP is used to protect emails</h3>
+      <section><img src="images/signal-app-logo.png" width="256" height="256" class="bullet">
+        <h2 class="bullet">Signal</h2>
       </section>
       <section>
-        <h2 class="bullet">Web of Trust basics</h2>
-        <h3 class="bullet">The Web of Trust is something we use in PGP</h3>
-        <h3 class="bullet">Essentially, it's a way to distribute and authenticate keys.</h3>
-        <h3 class="bullet">Put another way, the Web of Trust allows you to retrieve and verify someone else's identity.</h3>
+        <h2 class="bullet">Signal</h2>
+        <!-- TODO: links here-->
+        <h3 class="bullet">Install it from the App Store or the Google Play Store</h3>
+        <h3 class="bullet">Register with your phone number</h3>
+        <h3 class="bullet">End-to-end encrypted texting and calling</h3>
+        <h3 class="bullet">Works only with other Signal users</h3>
       </section>
       <section>
-        <h2 class="bullet">Keysigning</h2>
-        <h3 class="bullet">Keysigning: the act of creating a digital signature of someone else's key</h3>
-        <h3 class="bullet">You want to sign people's keys, to verify others' keys</h3>
-        <h3 class="bullet">You want others to sign your keys, so others can verify your key</h3>
-        <h3 class="bullet">Unless you have a problem with the government knowing your social graph.</h3>
+        <h2 class="bullet">Safety numbers</h2>
+        <h3 class="bullet">Each conversation has a safety number</h3>
+        <h3 class="bullet">Safety numbers change when the other person reinstalls Signal</h3>
+        <h3 class="bullet">They also change when someone's impersonating the other person</h3>
       </section>
       <section>
-        <h2 class="bullet">A small note on how well you need to know the person</h2>
-        <h3 class="bullet">You do not need to know a person at all to sign their key.</h3>
-        <h3 class="bullet">You can even sign the key of a person you've just met. And, in fact, many people do at keysigning parties.</h3>
-        <h3 class="bullet">Just be aware of how you need to verify their identity.</h3>
+        <h2 class="bullet">Verifying safety numbers</h2>
+        <h3 class="bullet">Open the other person's conversation and call them</h3>
+        <h3 class="bullet">On Android, tap the conversation menu, then "verify safety number"</h3>
+        <h3 class="bullet">On iOS, tap the other person's name at the top, then "verify safety number"</h3>
+        <h3 class="bullet">Read the numbers aloud to the other person to compare</h3>
       </section>
       <section>
-        <h2 class="bullet">Keysigning best practices: for people you <em>do</em> know</h2>
-        <h3 class="bullet">This is the easy part.</h3>
-        <h3 class="bullet">A phone call will suffice. This is because you will recognize their voice - no (regular) texting!</h3>
-        <h3 class="bullet">You can skip the phone call if you have already established a secure conversation with them in some other way.</h3>
-        <h3 class="bullet">For example, if you've verified their identify over OTR, you can use OTR to send them your key.</h3>
+        <h2 class="bullet">Verifying calls</h2><img src="images/signal-call-words.png" class="bullet">
       </section>
       <section>
-        <h2 class="bullet">Keysigning best practices: for people you <em>don't</em> know</h2>
-        <h3 class="bullet">This isn't nearly as convenient. :(</h3>
-        <h3 class="bullet">At <strong>minimum</strong> you must require at least one form of government-issued photo identification. A drivers license will work, as well as a passport.</h3>
-        <h3 class="bullet">Compare photo ID to them, and compare the name on the ID to the name on the key</h3>
-        <h3 class="bullet">If possible, send your signature to them instead of uploading it.</h3>
-        <h3 class="bullet">(If you're using GNU/Linux, you can use caff.)</h3>
+        <h2 class="bullet">Make sure Signal notices changes</h2><img src="images/signal-safety-numbers.png" class="bullet">
       </section>
       <section>
-        <h2 class="bullet">Creating a key</h2>
-        <h3 class="bullet">The defaults are good</h3>
-        <h3 class="bullet"><a href="https://www.debian-administration.org/users/dkg/weblog/97">Don't enter anything in the Comment field</a></h3>
-        <h3 class="bullet">Generate a revocation certificate</h3>
-        <h3 class="bullet">Back up your key and your revocation certificate</h3>
-        <h3 class="bullet">Never, ever give your key to any person or company, even if it has a password. If a website asks you to upload your key, be suspicious.</h3>
-      </section>
-      <section>
-        <h2 class="bullet">Getting GPG</h2>
-        <h3 class="bullet">For Windows, get <a href="http://www.gpg4win.org/">Gpg4Win</a></h3>
-        <h3 class="bullet">For Mac OS X, get <a href="https://gpgtools.org/">GpgTools</a></h3>
-        <h3 class="bullet">For pretty much everything on GNU/Linux, you want to use GNOME Keyring. This is probably already installed; if not, use your package manager's software installation tool to install it.</h3>
-        <h3 class="bullet">For KDE/Trinity, use either Kleopatra or KGpg.</h3>
-      </section>
-      <section>
-        <h2 class="bullet">Using GPG</h2>
-        <h3 class="bullet">If you use your Mac's builtin Mail application, then GpgTools has provided a plugin for using GPG.</h3>
-        <h3 class="bullet">For pretty much everyone else, I recommend using <a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird</a> with <a href="https://www.enigmail.net/home/index.php">Enigmail</a>.</h3>
-        <h3 class="bullet">For some GNU/Linux systems, Thunderbird may be called Icedove. It works the exact same way.</h3>
-      </section>
-      <section>
-        <h2>Exercise: installing GPG</h2>
-      </section>
-      <section>
-        <h2>Exercise: generating a key</h2>
+        <h2 class="bullet">Final notes</h2>
+        <h3 class="bullet"><a href="https://support.whispersystems.org/hc/en-us">Signal support</a></h3>
+        <h3 class="bullet"><a href="https://chrome.google.com/webstore/detail/signal-private-messenger/bikioccmkafdpakkkcpdbppfkghcmihk">Signal Desktop</a></h3>
+        <h3 class="bullet">On Android, you can set Signal to receive SMS messages too</h3>
+        <h3 class="bullet">If you reinstall Signal, ask friends to update group descriptions (or leave groups beforehand)</h3>
       </section>
       <section data-bespoke-state="emphatic"><img src="images/CC_BY_3.0_weak_link_by_xp0s3.jpg" alt="Do not be the weak link - cryptoparty.org" height="371" width="556"></section>
       <section>
-        <h1>Honourable mentions and other miscellanea</h1>
+        <h1>Honourable mentions</h1>
       </section>
       <section>
-        <h2 class="bullet">Honourable mentions</h2>
-        <h3 class="bullet"><a href="https://whispersystems.org/blog/signal/">TextSecure / RedPhone / Signal</a></h3>
-        <h3 class="bullet"><a href="http://www.openkeychain.org/">OpenKeychain</a> & <a href="https://play.google.com/store/apps/details?id=com.fsck.k9">K9</a></h3>
+        <!-- TODO image has background--><img src="images/https-everywhere-banner.png" class="bullet regular-image">
         <h3 class="bullet"><a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a></h3>
+      </section>
+      <section><img src="images/privacy-badger.png" class="bullet regular-image">
+        <h3 class="bullet"><a href="https://www.eff.org/privacybadger">Privacy Badger</a></h3>
+      </section>
+      <section><img src="images/duckduckgo.svg" class="bullet regular-image">
         <h3 class="bullet"><a href="https://duckduckgo.com/">DuckDuckGo</a></h3>
       </section>
       <section>
@@ -310,7 +279,7 @@
       </section>
       <section>
         <h2>Questions?</h2>
-        <h3>Email me at <a href="mailto:alex@strugee.net">alex@strugee.net</a></h3>
+        <h3>Email me at <a href="mailto:alex@strugee.net">alex@strugee.net</a> or contact me via Signal</h3>
         <h3>Or just shout it out right now</h3>
       </section>
       <section>
@@ -318,12 +287,10 @@
         <h3>CryptoParty logo - public domain (CC0)</h3>
         <h3>Tor logo - The Tor Project, Inc. - CC Attribution 3.0 US</h3>
         <h3>State of surveillance - xp0s3 - CC BY 3.0</h3>
-        <h3>GnuPG logo - Free Software Foundation - GNU GPL v2 or higher</h3>
         <h3>Weak link - xp0s3 - CC BY 3.0</h3>
+        <!-- TODO HTTPS Everywhere Privacy Badger-->
+        <h3>DuckDuckGo logo DuckDuckGo, Inc. - Derived from the <a rel="nofollow" class="external text" href="http://www.duckduckgo.com/">DuckDuckGo homepage</a>/<a rel="nofollow" class="external text" href="https://github.com/duckduckgo/community-platform/blob/master/root/static/img/duckduckgo-icon.png">Duck Duck Go's github</a> - Public Domain</h3>
         <h3>Slideshow built using Bespoke.js</h3>
-      </section>
-      <section>
-        <h1>Keysigning party</h1>
       </section>
       <section>
         <h2>Access this presentation again</h2>
