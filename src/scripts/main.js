@@ -20,3 +20,10 @@ bespoke.from('article', [
 	progress(),
 	state()
 ]);
+
+var signalNumber = localStorage.getItem('signal-number');
+console.log(signalNumber);
+if (signalNumber) {
+	document.getElementById('signal-fillin-inner').innerHTML = signalNumber;
+	document.getElementById('signal-fillin-outer').removeAttribute('hidden');
+}

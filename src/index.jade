@@ -31,10 +31,9 @@ html
 				h2 Roadmap
 				h3 Why privacy?
 				hr
-				h3 Privacy basics (part I)
+				h3 Privacy basics
 				h3 Tor
 				hr
-				h3 Privacy basics (part II)
 				h3 Off-The-Record (OTR)
 				hr
 				h3 Signal
@@ -107,7 +106,7 @@ html
 				img(src='images/SocialGraphSecureAll.svg', width='584.23', height='397.33')
 
 			section
-				h1 Privacy basics (I)
+				h1 Privacy basics
 
 			section
 				h2.bullet Let's keep this short.
@@ -145,7 +144,7 @@ html
 			section
 				h2.bullet Using Tor
 				h3.bullet Tor isn't useful on its own
-				h3.bullet You use normal applications - like email, chat and your web browser - and tell them to send data through the Tor network instead of the regular Internet.
+				h3.bullet You use normal applications - like email, chat and your web browser - and tell them to use the Tor network instead of the regular Internet.
 				h3.bullet For your web browser, you use the Tor Browser Bundle
 				h3.bullet For other applications, you use their proxy settings
 				h3.bullet For BitTorrent, you do nothing. Don't use BitTorrent with Tor.
@@ -168,7 +167,7 @@ html
 				h3.bullet Tails is like the TBB, but it works for the entire computer
 				h3.bullet Instead of starting Tails from your hard drive, you put Tails on a CD and start the computer from the CD
 				h3.bullet When you shut down Tails, it forgets everything you did
-				h3.bullet Restart Tails inbetween tasks
+				h3.bullet Restart Tails in-between tasks
 				h3.bullet The warning about signing into things still applies
 
 			section
@@ -187,20 +186,6 @@ html
 
 			section(data-bespoke-state='emphatic')
 				img(src='images/GetOnDownAndGetEncryptedWithACryptoParty.jpeg', alt='#cryptoparty', width='421', height='272')
-
-			section
-				h1 Privacy basics (II)
-
-			section
-				h2.bullet Public key cryptography
-				h3.bullet Instead of having one key, you have two
-				h3.bullet One private, one public
-				h3.bullet Most systems use this idea nowadays
-
-			section
-				h2.bullet Stuff you can do with two keys
-				h3.bullet Digital signatures
-				h3.bullet Fine-grained encryption
 
 			section
 				h1 Tor Messenger + Off-The-Record
@@ -276,7 +261,7 @@ html
 				img.bullet(src='images/signal-call-words.png') 
 
 			section
-				h2.bullet Make sure Signal notices changes
+				h2.bullet Make sure Signal notices safety number changes
 				img.bullet(src='images/signal-safety-numbers.png')
 
 			section
@@ -323,6 +308,9 @@ html
 			section
 				h2 Questions?
 				h3 Email me at <a href="mailto:alex@strugee.net">alex@strugee.net</a> or contact me via Signal
+					div#signal-fillin-outer(hidden) (
+						span#signal-fillin-inner
+						| )
 				h3 Or just shout it out right now
 
 			section
